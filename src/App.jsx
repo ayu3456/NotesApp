@@ -4,13 +4,14 @@ import './App.css';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Paste from './components/Paste';
-
 import ViewPaste from './components/ViewPaste';
+
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom';
+
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,15 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Navbar />
-        <ViewPaste/>
+        <ViewPaste />
+      </div>
+    ),
+  },
+  {
+    path: '*',  
+    element: (
+      <div>
+        Not found
       </div>
     ),
   },
